@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин квітів</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="image/Logo.png" alt="Лого магазину" class="logo">
+            <nav>
+                <a href="#">Головна</a>
+                <a href="#">Каталог</a>
+                <a href="#">Корзина</a>
+                <a href="#">Контакти</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="filter">
+            <h2>Фільтрувати товари</h2>
+            <select id="flowerType" onchange="filterProducts()">
+                <option value="">Вибрати тип квітів</option>
+                <option value="Троянда">Троянда</option>
+                <option value="Тюльпан">Тюльпан</option>
+                <option value="Лілія">Лілія</option>
+            </select>
+        </section>
+
+        <section class="product-list">
+         
+        </section>
+
+        <section class="cart">
+            <h2>Корзина</h2>
+            <ul id="cartList">
+             
+            </ul>
+            <p id="totalPrice">Загальна вартість: 0 UAH</p>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Магазин квітів. Твоя бабця оцінить.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
