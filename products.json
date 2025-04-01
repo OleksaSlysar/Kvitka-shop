@@ -1,0 +1,8 @@
+[
+    { "id": 1, "name": "Рожева троянда", "price": 100, "image": "image/pinkrose.jpg", "category": "flowers" },
+    { "id": 2, "name": "Плюшева мавпа", "price": 300, "image": "image/Logo.png", "category": "toys" },
+    { "id": 3, "name": "Молочний шоколад", "price": 120, "image": "image/MilkChokolatka.jpg", "category": "chocolates" },
+    { "id": 4, "name": "Срібний браслет", "price": 500, "image": "image/SilverBand.avif", "category": "jewelry" },
+    { "id": 5, "name": "Орхідея", "price": 200, "image": "image/orchid.jpg", "category": "flowers" },
+    { "id": 6, "name": "Золотий ланцюжок", "price": 7500, "image": "image/GoldNiger.avif", "category": "jewelry" }
+]

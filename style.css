@@ -1,47 +1,200 @@
+/* Загальні стилі */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
+    background-color: #f8f9fa;
+    text-align: center;
     flex-direction: column;
-    min-height: 100vh;
 }
 
+/* Хедер */
 header {
-    background-color: #ffcccb;
-    padding: 15px 20px;
-}
-
-.header-container {
+    background: #343a40;
+    color: white;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
-    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 nav {
     display: flex;
-    gap: 20px;
+    align-items: center;
 }
 
-nav a {
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #ffc107;
+}
+
+/* Бургер-меню */
+.burger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #343a40;
+        width: 200px;
+        text-align: right;
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}
+
+/* Головна сторінка */
+main {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Товари */
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    background: white;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background: #218838;
+}
+
+/* Кошик */
+#cart-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#total-price {
+    font-size: 20px;
     font-weight: bold;
 }
 
-main {
-    flex-grow: 1;
-    padding: 20px;
-    text-align: center;
+button {
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-footer {
-    background-color: #ffcccb;
-    text-align: center;
-    padding: 10px;
+#checkout {
+    background: #007bff;
+    color: white;
 }
+
+#checkout:hover {
+    background: #0056b3;
+}
+
+#clear-cart {
+    background: #dc3545;
+    color: white;
+}
+
+#clear-cart:hover {
+    background: #c82333;
+}
+
+/* Футер */
+footer {
+    background: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.admin-product {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.admin-product img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.admin-product .btn {
+    margin-left: auto;
+}
+
+

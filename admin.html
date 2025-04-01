@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адмін-панель</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">🎁 Подарунки від Артура</div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="cart.html">Кошик</a></li>
+            <li><a href="admin.html">Адмін</a></li>
+        </ul>
+        <div class="burger-menu" onclick="toggleMenu()">☰</div>
+    </nav>
+</header>
+
+<main>
+    <h1>Адмін-панель</h1>
+
+    <!-- Форма для входу -->
+    <div id="login-section">
+        <form id="login-form">
+            <input type="text" id="admin-username" placeholder="Логін" required>
+            <input type="password" id="admin-password" placeholder="Пароль" required>
+            <button type="submit">Увійти</button>
+        </form>
+    </div>
+
+    <!-- Адмін панель -->
+    <div id="admin-panel" class="hidden">
+        <h2>Додавання товару</h2>
+        <form id="add-product-form">
+            <label>Ім'я:</label><input type="text" id="product-name">
+            <label>Ціна:</label><input type="number" id="product-price">
+            <label>Фото:</label><input type="text" id="product-image">
+            <button type="submit">Додати</button>
+            <button id="logout-btn">Вийти</button>
+        </form>
+
+        <h2>Список товарів</h2>
+        <ul id="admin-products"></ul>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Подарунки від Артура. Ваша мама оцінить.</p>
+</footer>
+
+</body>
+</html>
